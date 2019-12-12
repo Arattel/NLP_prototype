@@ -1,0 +1,20 @@
+.Form {
+  min-width: 531px;
+  padding: 30px 40px;
+  height: 300px;
+  display: flex;
+}
+.Result {
+  margin-right: 100px;
+}
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.Butt {
+  width: 50px;
+}
+.Cathegory {
+  font-size: 38px;
+}
+/*# sourceMappingURL=Form.css.map */
