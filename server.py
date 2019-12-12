@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from nlp.classification import classify
 app = Flask(__name__)
 app.config["CACHE_TYPE"] = "null"
 
@@ -27,6 +28,8 @@ def add_message():
         "class":"pont"
     }
     text_for_classification = request.get_json(force=True)['text']
+    dict_resp['class'] = classify(text_for_classification)[0]
+    print(dict_resp)
     return jsonify(dict_resp)
 
 if __name__ == "__main__":

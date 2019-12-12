@@ -12,5 +12,6 @@ document.addEventListener('click', async evt =>{
          console.log(config);
          const  response = await (await fetch(`http://127.0.0.1:5000/results/`, config)).json();
          const label = response.class;
+         document.getElementsByClassName("Cathegory")[0].innerHTML = label;
     }
 });
